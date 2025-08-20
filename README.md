@@ -227,3 +227,24 @@ Standard **fork → branch → PR** workflow. Use *Conventional Commits* (`feat
 ## License
 
 MIT © Microsoft Corporation
+
+
+```mermaid
+flowchart TD
+    A[Client Apps<br/>(Web, Mobile, etc.)]
+    B[API Layer<br/>(Controllers)]
+    C[Service Layer]
+    D[Data Access Layer<br/>(Repositories)]
+    E[(Database)]
+    F[External Integrations]
+    G[Utilities & Helpers]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    C --> F
+    B --> G
+    C --> G
+    D --> G
+```
